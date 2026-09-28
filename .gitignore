@@ -1,0 +1,21 @@
+# Eclipse
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+.settings/
+
+# Java compiled files
+*.class
+
+# macOS
+.DS_Store
+
+# IDE files
+*.log
+
+# Local database / sensitive files
+.env
+*.sql.bak
