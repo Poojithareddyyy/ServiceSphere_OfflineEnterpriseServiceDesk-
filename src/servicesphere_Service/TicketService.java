@@ -30,9 +30,6 @@ public class TicketService {
 
             con = DBConn.MyConnection();
 
-            // =========================================
-            // 1. GET USER ID
-            // =========================================
 
             String userSql =
                     "SELECT user_id FROM users WHERE username = ?";
@@ -51,9 +48,6 @@ public class TicketService {
             rs.close();
             userStmt.close();
 
-            // =========================================
-            // 2. GET ASSET ID
-            // =========================================
 
             Integer assetId = null;
 
@@ -83,16 +77,9 @@ public class TicketService {
                 assetStmt.close();
             }
 
-            // =========================================
-            // 3. GENERATE TEMPORARY TICKET NUMBER
-            // =========================================
-
             String ticketNumber =
                     "INC-" + System.currentTimeMillis();
 
-            // =========================================
-            // 4. INSERT TICKET
-            // =========================================
 
             String ticketSql =
                     "INSERT INTO tickets " +
@@ -125,9 +112,6 @@ public class TicketService {
                 return null;
             }
 
-            // =========================================
-            // 5. GET GENERATED TICKET ID
-            // =========================================
 
             ResultSet generatedKeys =
                     ticketStmt.getGeneratedKeys();
@@ -140,9 +124,6 @@ public class TicketService {
 
             generatedKeys.close();
 
-            // =========================================
-            // 6. CALCULATE SLA
-            // =========================================
 
             int targetMinutes;
 
@@ -165,9 +146,6 @@ public class TicketService {
                     break;
             }
 
-            // =========================================
-            // 7. CREATE SLA RECORD
-            // =========================================
 
             String slaSql =
                     "INSERT INTO sla " +
@@ -395,9 +373,6 @@ public class TicketService {
         return 0;
     }
     
- // ==========================================
- // GET ALL TICKETS FOR ADMIN
- // ==========================================
 
  public java.util.List<Object[]> getAllTickets() {
 
@@ -472,9 +447,7 @@ public class TicketService {
      return tickets;
  }
  
-//==========================================
-//GET AVAILABLE TECHNICIANS
-//==========================================
+
 
 public java.util.List<Object[]> getAvailableTechnicians() {
 
@@ -523,13 +496,6 @@ public java.util.List<Object[]> getAvailableTechnicians() {
   return technicians;
 }
 
-//==========================================
-//ASSIGN TECHNICIAN TO TICKET
-//==========================================
-
-//==========================================
-//ASSIGN / REASSIGN TECHNICIAN TO TICKET
-//==========================================
 
 public boolean assignTechnician(
      int ticketId,
@@ -545,16 +511,11 @@ public boolean assignTechnician(
 
      con = JarJdbc.DBConn.MyConnection();
 
-     // ------------------------------------------
-     // Start transaction
-     // ------------------------------------------
+
 
      con.setAutoCommit(false);
 
 
-     // ------------------------------------------
-     // Remove previous current assignment
-     // ------------------------------------------
 
      String deleteSql =
              "DELETE FROM ticket_assignment " +
@@ -568,9 +529,6 @@ public boolean assignTechnician(
      deleteStmt.executeUpdate();
 
 
-     // ------------------------------------------
-     // Insert new assignment
-     // ------------------------------------------
 
      String insertSql =
              "INSERT INTO ticket_assignment " +
@@ -596,9 +554,6 @@ public boolean assignTechnician(
      }
 
 
-     // ------------------------------------------
-     // Change ticket status to ASSIGNED
-     // ------------------------------------------
 
      String statusSql =
              "UPDATE tickets " +
@@ -613,9 +568,6 @@ public boolean assignTechnician(
      statusStmt.executeUpdate();
 
 
-     // ------------------------------------------
-     // Commit everything
-     // ------------------------------------------
 
      con.commit();
 
@@ -667,9 +619,6 @@ public boolean assignTechnician(
  }
 }
 
-//==========================================
-//GET ADMIN USER ID
-//==========================================
 
 public int getAdminUserId() {
 
@@ -715,9 +664,6 @@ public int getAdminUserId() {
  return -1;
 }
    
-//==========================================
-//GET SLA MONITOR DATA
-//==========================================
 
 public java.util.List<Object[]> getSLAMonitorData() {
 
