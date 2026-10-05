@@ -31,9 +31,7 @@ public class SLAMonitorFrame extends JFrame {
 
     public SLAMonitorFrame() {
 
-        // ==========================================
-        // FRAME SETTINGS
-        // ==========================================
+
 
         setTitle("ServiceSphere - SLA Monitor");
 
@@ -48,9 +46,6 @@ public class SLAMonitorFrame extends JFrame {
         setLayout(new BorderLayout());
 
 
-        // ==========================================
-        // HEADER
-        // ==========================================
 
         JPanel headerPanel =
                 new JPanel(new BorderLayout());
@@ -115,9 +110,6 @@ public class SLAMonitorFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // TABLE
-        // ==========================================
 
         String[] columns = {
                 "Ticket ID",
@@ -192,9 +184,6 @@ public class SLAMonitorFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // BUTTON PANEL
-        // ==========================================
 
         JPanel buttonPanel =
                 new JPanel(
@@ -263,16 +252,10 @@ public class SLAMonitorFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // LOAD SLA DATA
-        // ==========================================
 
         loadSLAData();
 
 
-        // ==========================================
-        // REFRESH
-        // ==========================================
 
         refreshButton.addActionListener(e -> {
 
@@ -281,10 +264,6 @@ public class SLAMonitorFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // VIEW DETAILS
-        // ==========================================
-
         detailsButton.addActionListener(e -> {
 
             viewSelectedSLA();
@@ -292,9 +271,6 @@ public class SLAMonitorFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // BACK
-        // ==========================================
 
         backButton.addActionListener(e -> {
 
@@ -305,9 +281,6 @@ public class SLAMonitorFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // DISPLAY
-        // ==========================================
 
         setExtendedState(
                 JFrame.MAXIMIZED_BOTH
@@ -319,9 +292,6 @@ public class SLAMonitorFrame extends JFrame {
     }
 
 
-    // ==========================================
-    // LOAD SLA DATA
-    // ==========================================
 
     private void loadSLAData() {
     	
@@ -391,9 +361,6 @@ public class SLAMonitorFrame extends JFrame {
     }
 
 
-    // ==========================================
-    // VIEW SLA DETAILS
-    // ==========================================
 
     private void viewSelectedSLA() {
 
@@ -515,10 +482,6 @@ public class SLAMonitorFrame extends JFrame {
         );
     }
 
-
-    // ==========================================
-    // MAIN
-    // ==========================================
 
 
 }
