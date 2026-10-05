@@ -10,10 +10,6 @@ import JarJdbc.DBConn;
 
 public class AdminDashboardService {
 
-    // ==========================================
-    // 1. TOTAL TICKETS
-    // ==========================================
-
     public int getTotalTickets() {
 
         String sql = "SELECT COUNT(*) FROM tickets";
@@ -45,9 +41,6 @@ public class AdminDashboardService {
     }
 
 
-    // ==========================================
-    // 2. ACTIVE TICKETS
-    // ==========================================
 
     public int getActiveTickets() {
 
@@ -83,10 +76,6 @@ public class AdminDashboardService {
     }
 
 
-    // ==========================================
-    // 3. HIGH PRIORITY TICKETS
-    // ==========================================
-
     public int getHighPriorityTickets() {
 
         String sql =
@@ -120,9 +109,6 @@ public class AdminDashboardService {
     }
 
 
-    // ==========================================
-    // 4. SLA BREACHED
-    // ==========================================
 
     public int getSLABreachedTickets() {
 
@@ -157,9 +143,6 @@ public class AdminDashboardService {
     }
 
 
-    // ==========================================
-    // 5. RESOLVED TICKETS
-    // ==========================================
 
     public int getResolvedTickets() {
 
@@ -194,9 +177,6 @@ public class AdminDashboardService {
     }
 
 
-    // ==========================================
-    // 6. TECHNICIAN COUNT
-    // ==========================================
 
     public int getTechnicianCount() {
 
@@ -229,10 +209,6 @@ public class AdminDashboardService {
         return 0;
     }
 
-
-    // ==========================================
-    // 7. RECENT TICKETS
-    // ==========================================
 
     public List<Object[]> getRecentTickets() {
 
