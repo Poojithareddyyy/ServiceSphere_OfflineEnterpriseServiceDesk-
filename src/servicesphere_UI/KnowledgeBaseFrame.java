@@ -51,7 +51,7 @@ public class KnowledgeBaseFrame extends JFrame {
         );
 
 
-        // ================= MAIN PANEL =================
+
 
         JPanel mainPanel =
                 new JPanel(new BorderLayout(20, 20));
@@ -66,7 +66,7 @@ public class KnowledgeBaseFrame extends JFrame {
         );
 
 
-        // ================= HEADER =================
+ 
 
         JPanel headerPanel =
                 new JPanel(new BorderLayout());
@@ -112,7 +112,6 @@ public class KnowledgeBaseFrame extends JFrame {
         );
 
 
-        // ================= SEARCH =================
 
         JPanel searchPanel =
                 new JPanel(new BorderLayout(10, 10));
@@ -150,7 +149,7 @@ public class KnowledgeBaseFrame extends JFrame {
         );
 
 
-        // ================= TABLE =================
+
 
         String[] columns = {
                 "ID",
@@ -186,7 +185,7 @@ public class KnowledgeBaseFrame extends JFrame {
                 new JScrollPane(articleTable);
 
 
-        // ================= CONTENT =================
+     
 
         contentArea =
                 new JTextArea();
@@ -268,7 +267,6 @@ public class KnowledgeBaseFrame extends JFrame {
         );
 
 
-        // ================= BOTTOM =================
 
         JPanel bottomPanel =
                 new JPanel(new BorderLayout());
@@ -294,8 +292,6 @@ public class KnowledgeBaseFrame extends JFrame {
                 BorderLayout.SOUTH
         );
 
-
-        // ================= ACTIONS =================
 
         searchButton.addActionListener(e -> {
 
@@ -372,7 +368,7 @@ public class KnowledgeBaseFrame extends JFrame {
     }
 
 
-    // ================= LOAD ARTICLES =================
+
 
     private void loadArticles(
             List<Object[]> articles) {
@@ -394,7 +390,6 @@ public class KnowledgeBaseFrame extends JFrame {
     }
 
 
-    // ================= SHOW ARTICLE =================
 
     private void showSelectedArticle() {
 
