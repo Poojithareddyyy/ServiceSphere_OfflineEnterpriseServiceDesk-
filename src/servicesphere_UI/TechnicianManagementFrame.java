@@ -31,9 +31,6 @@ public class TechnicianManagementFrame extends JFrame {
 
     public TechnicianManagementFrame() {
 
-        // ==========================================
-        // FRAME SETTINGS
-        // ==========================================
 
         setTitle("ServiceSphere - Technician Management");
 
@@ -48,9 +45,6 @@ public class TechnicianManagementFrame extends JFrame {
         setLayout(new BorderLayout());
 
 
-        // ==========================================
-        // HEADER
-        // ==========================================
 
         JPanel headerPanel =
                 new JPanel(new BorderLayout());
@@ -112,9 +106,6 @@ public class TechnicianManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // TECHNICIAN TABLE
-        // ==========================================
 
         String[] columns = {
                 "ID",
@@ -184,9 +175,6 @@ public class TechnicianManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // BOTTOM BUTTON PANEL
-        // ==========================================
 
         JPanel buttonPanel =
                 new JPanel(
@@ -285,16 +273,10 @@ public class TechnicianManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // LOAD TECHNICIANS
-        // ==========================================
 
         loadTechnicians();
 
 
-        // ==========================================
-        // ADD TECHNICIAN
-        // ==========================================
 
         addButton.addActionListener(e -> {
 
@@ -302,10 +284,6 @@ public class TechnicianManagementFrame extends JFrame {
 
         });
 
-
-        // ==========================================
-        // SET AVAILABLE
-        // ==========================================
 
         activateButton.addActionListener(e -> {
 
@@ -316,9 +294,6 @@ public class TechnicianManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // SET UNAVAILABLE
-        // ==========================================
 
         unavailableButton.addActionListener(e -> {
 
@@ -329,20 +304,12 @@ public class TechnicianManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // REFRESH
-        // ==========================================
 
         refreshButton.addActionListener(e -> {
 
             loadTechnicians();
 
         });
-
-
-        // ==========================================
-        // BACK
-        // ==========================================
 
         backButton.addActionListener(e -> {
 
@@ -353,10 +320,6 @@ public class TechnicianManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // DISPLAY
-        // ==========================================
-
         setExtendedState(
                 JFrame.MAXIMIZED_BOTH
         );
@@ -366,10 +329,6 @@ public class TechnicianManagementFrame extends JFrame {
         setVisible(true);
     }
 
-
-    // ==========================================
-    // LOAD TECHNICIANS
-    // ==========================================
 
     private void loadTechnicians() {
 
@@ -394,9 +353,6 @@ public class TechnicianManagementFrame extends JFrame {
     }
 
 
-    // ==========================================
-    // ADD TECHNICIAN DIALOG
-    // ==========================================
 
     private void showAddTechnicianDialog() {
 
@@ -513,10 +469,6 @@ public class TechnicianManagementFrame extends JFrame {
                 phoneField.getText().trim();
 
 
-        // ==========================================
-        // VALIDATION
-        // ==========================================
-
         if (name.isEmpty()) {
 
             JOptionPane.showMessageDialog(
@@ -569,9 +521,6 @@ public class TechnicianManagementFrame extends JFrame {
         }
 
 
-        // ==========================================
-        // SAVE TECHNICIAN
-        // ==========================================
 
         boolean success =
                 technicianService.addTechnician(
@@ -606,9 +555,6 @@ public class TechnicianManagementFrame extends JFrame {
     }
 
 
-    // ==========================================
-    // UPDATE TECHNICIAN STATUS
-    // ==========================================
 
     private void updateSelectedTechnicianStatus(
             String status) {
@@ -667,10 +613,6 @@ public class TechnicianManagementFrame extends JFrame {
         }
     }
 
-
-    // ==========================================
-    // MAIN
-    // ==========================================
 
 
 }
