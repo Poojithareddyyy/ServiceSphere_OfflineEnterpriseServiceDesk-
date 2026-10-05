@@ -45,7 +45,7 @@ public class ReportsFrame extends JFrame {
         JPanel mainPanel = new JPanel(new BorderLayout(20, 20));
         mainPanel.setBorder(BorderFactory.createEmptyBorder(25, 30, 25, 30));
 
-        // ================= HEADER =================
+
 
         JPanel headerPanel = new JPanel(new BorderLayout());
 
@@ -72,7 +72,7 @@ public class ReportsFrame extends JFrame {
         mainPanel.add(headerPanel, BorderLayout.NORTH);
 
 
-        // ================= STAT CARDS =================
+   
 
         JPanel cardsPanel =
                 new JPanel(new GridLayout(2, 4, 20, 20));
@@ -143,7 +143,7 @@ public class ReportsFrame extends JFrame {
         );
         
         
-     // ================= TECHNICIAN WORKLOAD =================
+
 
         JLabel workloadTitle =
                 new JLabel("Technician Workload");
@@ -219,7 +219,7 @@ public class ReportsFrame extends JFrame {
         );
 
 
-        // ================= BOTTOM =================
+
 
         JPanel bottomPanel =
                 new JPanel(new BorderLayout());
@@ -246,7 +246,7 @@ public class ReportsFrame extends JFrame {
         );
 
 
-        // ================= BUTTON ACTIONS =================
+
 
         refreshButton.addActionListener(e -> {
 
@@ -280,7 +280,7 @@ public class ReportsFrame extends JFrame {
     }
 
 
-    // ================= CREATE CARD =================
+
 
     private JPanel createCard(
             String title,
@@ -344,7 +344,7 @@ public class ReportsFrame extends JFrame {
     }
 
 
-    // ================= LOAD REPORTS =================
+
 
     private void loadReports() {
 
