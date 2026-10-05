@@ -10,9 +10,6 @@ import JarJdbc.DBConn;
 
 public class TechnicianService {
 
-    // ==========================================
-    // GET ALL TECHNICIANS
-    // ==========================================
 
     public List<Object[]> getAllTechnicians() {
 
@@ -63,9 +60,6 @@ public class TechnicianService {
     }
 
 
-    // ==========================================
-    // ADD TECHNICIAN
-    // ==========================================
 
     public boolean addTechnician(
             String technicianName,
@@ -108,9 +102,6 @@ public class TechnicianService {
     }
 
 
-    // ==========================================
-    // UPDATE TECHNICIAN STATUS
-    // ==========================================
 
     public boolean updateTechnicianStatus(
             int technicianId,
