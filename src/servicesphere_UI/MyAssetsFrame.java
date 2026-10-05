@@ -46,9 +46,7 @@ public class MyAssetsFrame extends JFrame {
 
         setLayout(new BorderLayout(15, 15));
 
-        // =========================
-        // HEADER
-        // =========================
+
 
         JPanel headerPanel =
                 new JPanel(new BorderLayout());
@@ -99,9 +97,6 @@ public class MyAssetsFrame extends JFrame {
         );
 
 
-        // =========================
-        // TABLE
-        // =========================
 
         String[] columns = {
                 "Asset Code",
@@ -167,9 +162,6 @@ public class MyAssetsFrame extends JFrame {
         );
 
 
-        // =========================
-        // BOTTOM BUTTONS
-        // =========================
 
         JPanel bottomPanel =
                 new JPanel(
@@ -255,9 +247,6 @@ public class MyAssetsFrame extends JFrame {
     }
 
 
-    // =========================
-    // LOAD ASSETS
-    // =========================
 
     private void loadAssets() {
 
@@ -277,11 +266,5 @@ public class MyAssetsFrame extends JFrame {
 
         }
     }
-
-
-    // =========================
-    // TEST LAUNCHER
-    // =========================
-
 
 }
