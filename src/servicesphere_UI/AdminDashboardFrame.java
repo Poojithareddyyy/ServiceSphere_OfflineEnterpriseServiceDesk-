@@ -21,21 +21,17 @@ public class AdminDashboardFrame extends JFrame {
 
     public AdminDashboardFrame() {
 
-        // FRAME SETTINGS
+    
         setTitle("ServiceSphere - Admin Dashboard");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setMinimumSize(new Dimension(1100, 700));
         setLayout(new BorderLayout());
 
-        // =========================
-        // SIDEBAR
-        // =========================
 
         sidebarPanel = new JPanel(new BorderLayout());
         sidebarPanel.setBackground(new Color(25, 35, 55));
         sidebarPanel.setPreferredSize(new Dimension(240, 0));
 
-        // SIDEBAR TITLE
         JLabel sidebarTitle = new JLabel(
                 "<html><center>SERVICE<br>SPHERE</center></html>"
         );
@@ -49,7 +45,7 @@ public class AdminDashboardFrame extends JFrame {
 
         sidebarPanel.add(sidebarTitle, BorderLayout.NORTH);
 
-        // SIDEBAR MENU
+      
         JPanel menuPanel = new JPanel(new GridLayout(8, 1, 0, 8));
         menuPanel.setBackground(new Color(25, 35, 55));
         menuPanel.setBorder(
@@ -139,7 +135,7 @@ public class AdminDashboardFrame extends JFrame {
 
         sidebarPanel.add(menuPanel, BorderLayout.CENTER);
 
-        // LOGOUT
+        // Logout
         JButton logoutButton = createMenuButton("Logout");
         
         logoutButton.addActionListener(e -> {
@@ -170,16 +166,10 @@ public class AdminDashboardFrame extends JFrame {
 
         sidebarPanel.add(logoutPanel, BorderLayout.SOUTH);
 
-        // =========================
-        // MAIN CONTENT
-        // =========================
 
         contentPanel = new JPanel(new BorderLayout());
         contentPanel.setBackground(new Color(245, 247, 250));
 
-        // =========================
-        // TOP HEADER
-        // =========================
 
         JPanel topPanel = new JPanel(new BorderLayout());
         topPanel.setBackground(Color.WHITE);
@@ -202,9 +192,6 @@ public class AdminDashboardFrame extends JFrame {
 
         contentPanel.add(topPanel, BorderLayout.NORTH);
 
-        // =========================
-        // DASHBOARD CENTER
-        // =========================
 
         JPanel dashboardPanel = new JPanel(new BorderLayout());
         dashboardPanel.setBackground(new Color(245, 247, 250));
@@ -212,13 +199,6 @@ public class AdminDashboardFrame extends JFrame {
                 BorderFactory.createEmptyBorder(25, 30, 25, 30)
         );
 
-        // =========================
-        // STATISTICS
-        // =========================
-        
-     // =========================
-     // STATISTICS
-     // =========================
 
      AdminDashboardService dashboardService =
              new AdminDashboardService();
@@ -284,9 +264,6 @@ public class AdminDashboardFrame extends JFrame {
 
         dashboardPanel.add(statsPanel, BorderLayout.NORTH);
 
-        // =========================
-        // RECENT TICKETS
-        // =========================
 
         JPanel recentPanel = new JPanel(new BorderLayout());
 
@@ -318,8 +295,6 @@ public class AdminDashboardFrame extends JFrame {
                 BorderLayout.NORTH
         );
 
-        // Ticket rows
-     // Recent ticket rows
 
         List<Object[]> recentTickets =
                 dashboardService.getRecentTickets();
@@ -384,25 +359,16 @@ public class AdminDashboardFrame extends JFrame {
                 BorderLayout.CENTER
         );
 
-        // =========================
-        // ADD PANELS
-        // =========================
 
         add(sidebarPanel, BorderLayout.WEST);
         add(contentPanel, BorderLayout.CENTER);
 
-        // =========================
-        // DISPLAY
-        // =========================
 
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setVisible(true);
     }
 
-    // =====================================================
-    // CREATE MENU BUTTON
-    // =====================================================
 
     private JButton createMenuButton(String text) {
 
@@ -425,9 +391,6 @@ public class AdminDashboardFrame extends JFrame {
         return button;
     }
 
-    // =====================================================
-    // CREATE STAT CARD
-    // =====================================================
 
     private JPanel createStatCard(
             String number,
@@ -495,9 +458,6 @@ public class AdminDashboardFrame extends JFrame {
         return card;
     }
 
-    // =====================================================
-    // CREATE TICKET ROW
-    // =====================================================
 
     private JPanel createTicketRow(
             String ticketId,
