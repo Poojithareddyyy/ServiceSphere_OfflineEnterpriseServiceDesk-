@@ -30,9 +30,6 @@ public class TicketManagementFrame extends JFrame {
 
     public TicketManagementFrame() {
 
-        // ==========================================
-        // FRAME SETTINGS
-        // ==========================================
 
         setTitle("ServiceSphere - Ticket Management");
 
@@ -46,10 +43,6 @@ public class TicketManagementFrame extends JFrame {
 
         setLayout(new BorderLayout());
 
-
-        // ==========================================
-        // HEADER
-        // ==========================================
 
         JPanel headerPanel =
                 new JPanel(new BorderLayout());
@@ -114,9 +107,6 @@ public class TicketManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // TABLE
-        // ==========================================
 
         String[] columns = {
                 "ID",
@@ -194,9 +184,6 @@ public class TicketManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // BOTTOM BUTTON PANEL
-        // ==========================================
 
         JPanel buttonPanel =
                 new JPanel(
@@ -356,16 +343,10 @@ public class TicketManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // LOAD TICKETS
-        // ==========================================
 
         loadTickets();
 
 
-        // ==========================================
-        // VIEW DETAILS
-        // ==========================================
 
         viewButton.addActionListener(e -> {
 
@@ -380,9 +361,6 @@ public class TicketManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // REFRESH
-        // ==========================================
 
         refreshButton.addActionListener(e -> {
 
@@ -391,10 +369,6 @@ public class TicketManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // BACK
-        // ==========================================
-
         backButton.addActionListener(e -> {
 
             dispose();
@@ -402,11 +376,6 @@ public class TicketManagementFrame extends JFrame {
             new AdminDashboardFrame();
 
         });
-
-
-        // ==========================================
-        // DISPLAY
-        // ==========================================
 
         setExtendedState(
                 JFrame.MAXIMIZED_BOTH
@@ -417,10 +386,6 @@ public class TicketManagementFrame extends JFrame {
         setVisible(true);
     }
 
-
-    // ==========================================
-    // LOAD ALL TICKETS
-    // ==========================================
 
     private void loadTickets() {
 
@@ -469,9 +434,6 @@ public class TicketManagementFrame extends JFrame {
     }
 
 
-    // ==========================================
-    // VIEW SELECTED TICKET
-    // ==========================================
 
     private void viewSelectedTicket() {
 
@@ -601,10 +563,6 @@ public class TicketManagementFrame extends JFrame {
                 JOptionPane.INFORMATION_MESSAGE
         );
     }
-    
- // ==========================================
- // ASSIGN SELECTED TICKET
- // ==========================================
 
  private void assignSelectedTicket() {
 
@@ -722,12 +680,6 @@ public class TicketManagementFrame extends JFrame {
                      .intValue();
 
 
-     /*
-      * Admin user ID.
-      *
-      * Our current system has one fixed
-      * administrator account.
-      */
      int adminUserId =
     	        ticketService.getAdminUserId();
 
