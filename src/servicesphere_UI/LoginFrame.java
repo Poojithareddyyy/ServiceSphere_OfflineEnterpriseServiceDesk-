@@ -28,9 +28,6 @@ public class LoginFrame extends JFrame  {
 
     public LoginFrame() {
 
-        // ==========================================
-        // FRAME SETTINGS
-        // ==========================================
 
         setTitle("ServiceSphere - Login");
 
@@ -41,18 +38,12 @@ public class LoginFrame extends JFrame  {
         setLayout(new BorderLayout());
 
 
-        // ==========================================
-        // MAIN BACKGROUND PANEL
-        // ==========================================
 
         JPanel mainPanel = new JPanel(new BorderLayout());
 
         mainPanel.setBackground(new Color(245, 247, 250));
 
 
-        // ==========================================
-        // HEADER PANEL
-        // ==========================================
 
         JPanel headerPanel = new JPanel(
                 new GridBagLayout()
@@ -69,9 +60,6 @@ public class LoginFrame extends JFrame  {
         header.anchor = GridBagConstraints.CENTER;
 
 
-        // ==========================================
-        // SERVICE SPHERE TITLE
-        // ==========================================
 
         titleLabel = new JLabel("SERVICE SPHERE");
 
@@ -99,9 +87,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // SUBTITLE
-        // ==========================================
 
         subtitleLabel = new JLabel(
                 "Offline Enterprise Service Desk & Incident Management System"
@@ -131,9 +116,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // LOGIN CARD
-        // ==========================================
 
         JPanel loginCard = new JPanel(
                 new GridBagLayout()
@@ -170,9 +152,6 @@ public class LoginFrame extends JFrame  {
                 new Insets(10, 10, 10, 10);
 
 
-        // ==========================================
-        // LOGIN HEADING
-        // ==========================================
 
         loginHeading =
                 new JLabel(
@@ -210,9 +189,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // LOGIN AS LABEL
-        // ==========================================
 
         roleLabel =
                 new JLabel("Login as");
@@ -240,9 +216,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // ROLE COMBO BOX
-        // ==========================================
 
         roleComboBox =
                 new JComboBox<>(
@@ -272,9 +245,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // USERNAME LABEL
-        // ==========================================
 
         usernameLabel =
                 new JLabel(
@@ -299,9 +269,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // USERNAME FIELD
-        // ==========================================
 
         usernameField =
                 new JTextField();
@@ -326,9 +293,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // PASSWORD LABEL
-        // ==========================================
 
         passwordLabel =
                 new JLabel("Password");
@@ -351,9 +315,7 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // PASSWORD FIELD
-        // ==========================================
+  
 
         passwordField =
                 new JPasswordField();
@@ -378,9 +340,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // SIGN IN BUTTON
-        // ==========================================
 
         loginButton =
                 new JButton("SIGN IN");
@@ -453,9 +412,7 @@ public class LoginFrame extends JFrame  {
                             role
                     );
 
-            // =========================
-            // ADMIN LOGIN
-            // =========================
+
 
             if ("ADMIN".equals(authenticatedRole)) {
 
@@ -472,9 +429,6 @@ public class LoginFrame extends JFrame  {
 
             }
 
-            // =========================
-            // EMPLOYEE LOGIN
-            // =========================
 
             else if ("EMPLOYEE".equals(authenticatedRole)) {
 
@@ -491,9 +445,7 @@ public class LoginFrame extends JFrame  {
 
             }
 
-            // =========================
-            // INVALID LOGIN
-            // =========================
+
 
             else {
 
@@ -507,9 +459,7 @@ public class LoginFrame extends JFrame  {
         });
 
 
-        // ==========================================
-        // AUTHORIZED ACCESS LABEL
-        // ==========================================
+
 
         JLabel accessLabel =
                 new JLabel(
@@ -547,9 +497,7 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // CENTER CONTAINER
-        // ==========================================
+
 
         JPanel centerPanel =
                 new JPanel(
@@ -580,9 +528,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // FOOTER
-        // ==========================================
 
         JLabel footerLabel =
                 new JLabel(
@@ -612,9 +557,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // ADD EVERYTHING
-        // ==========================================
 
         mainPanel.add(
                 headerPanel,
@@ -637,9 +579,6 @@ public class LoginFrame extends JFrame  {
         );
 
 
-        // ==========================================
-        // FULL SCREEN
-        // ==========================================
 
         setExtendedState(
                 JFrame.MAXIMIZED_BOTH
@@ -650,10 +589,6 @@ public class LoginFrame extends JFrame  {
         setVisible(true);
     }
 
-
-    // ==========================================
-    // MAIN METHOD
-    // ==========================================
 
     public static void main(String[] args) {
 
