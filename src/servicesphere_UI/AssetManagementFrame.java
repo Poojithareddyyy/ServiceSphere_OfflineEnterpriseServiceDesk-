@@ -43,10 +43,7 @@ public class AssetManagementFrame extends JFrame {
 
     public AssetManagementFrame() {
 
-        // ==========================================
-        // FRAME SETTINGS
-        // ==========================================
-
+    
         setTitle("ServiceSphere - Asset Management");
 
         setDefaultCloseOperation(
@@ -60,10 +57,7 @@ public class AssetManagementFrame extends JFrame {
         setLayout(new BorderLayout());
 
 
-        // ==========================================
-        // HEADER
-        // ==========================================
-
+    
         JPanel headerPanel =
                 new JPanel(new BorderLayout());
 
@@ -123,10 +117,6 @@ public class AssetManagementFrame extends JFrame {
                 BorderLayout.NORTH
         );
 
-
-        // ==========================================
-        // TABLE
-        // ==========================================
 
         String[] columns = {
                 "Asset ID",
@@ -193,9 +183,6 @@ public class AssetManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // ASSIGNMENT PANEL
-        // ==========================================
 
         JPanel assignmentPanel =
                 new JPanel(
@@ -299,18 +286,13 @@ public class AssetManagementFrame extends JFrame {
         );
 
 
-        // ==========================================
-        // LOAD DATA
-        // ==========================================
 
         loadAssets();
 
         loadEmployees();
 
 
-        // ==========================================
-        // ASSIGN BUTTON
-        // ==========================================
+  
 
         assignButton.addActionListener(e -> {
 
@@ -403,9 +385,7 @@ public class AssetManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // REFRESH
-        // ==========================================
+
 
         refreshButton.addActionListener(e -> {
 
@@ -415,9 +395,6 @@ public class AssetManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // BACK
-        // ==========================================
 
         backButton.addActionListener(e -> {
 
@@ -428,9 +405,6 @@ public class AssetManagementFrame extends JFrame {
         });
 
 
-        // ==========================================
-        // DISPLAY
-        // ==========================================
 
         setExtendedState(
                 JFrame.MAXIMIZED_BOTH
@@ -442,9 +416,6 @@ public class AssetManagementFrame extends JFrame {
     }
 
 
-    // ==========================================
-    // LOAD ALL ASSETS
-    // ==========================================
 
     private void loadAssets() {
 
@@ -475,9 +446,6 @@ public class AssetManagementFrame extends JFrame {
     }
 
 
-    // ==========================================
-    // LOAD EMPLOYEES
-    // ==========================================
 
     private void loadEmployees() {
 
