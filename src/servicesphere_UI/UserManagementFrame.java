@@ -36,9 +36,6 @@ public class UserManagementFrame extends JFrame {
 
     public UserManagementFrame() {
 
-        // =========================
-        // FRAME SETTINGS
-        // =========================
 
         setTitle("ServiceSphere - User Management");
 
@@ -54,9 +51,6 @@ public class UserManagementFrame extends JFrame {
                 new BorderLayout()
         );
 
-        // =========================
-        // MAIN BACKGROUND
-        // =========================
 
         JPanel mainPanel =
                 new JPanel(new BorderLayout());
@@ -65,9 +59,6 @@ public class UserManagementFrame extends JFrame {
                 new Color(245, 247, 250)
         );
 
-        // =========================
-        // HEADER
-        // =========================
 
         JPanel headerPanel =
                 new JPanel(new BorderLayout());
@@ -151,9 +142,6 @@ public class UserManagementFrame extends JFrame {
                 BorderLayout.NORTH
         );
 
-        // =========================
-        // FORM CONTAINER
-        // =========================
 
         JPanel centerPanel =
                 new JPanel(new GridBagLayout());
@@ -162,9 +150,6 @@ public class UserManagementFrame extends JFrame {
                 new Color(245, 247, 250)
         );
 
-        // =========================
-        // FORM CARD
-        // =========================
 
         JPanel formCard =
                 new JPanel(new GridBagLayout());
@@ -195,9 +180,6 @@ public class UserManagementFrame extends JFrame {
                         8, 10, 8, 10
                 );
 
-        // =========================
-        // FORM TITLE
-        // =========================
 
         JLabel formTitle =
                 new JLabel("Create New Employee");
@@ -228,9 +210,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // FULL NAME
-        // =========================
 
         gbc.gridwidth = 1;
 
@@ -257,9 +236,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // USERNAME
-        // =========================
 
         gbc.gridx = 0;
         gbc.gridy = 2;
@@ -279,9 +255,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // EMAIL
-        // =========================
 
         gbc.gridx = 0;
         gbc.gridy = 3;
@@ -301,9 +274,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // PASSWORD
-        // =========================
 
         gbc.gridx = 0;
         gbc.gridy = 4;
@@ -335,9 +305,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // DEPARTMENT
-        // =========================
 
         gbc.gridx = 0;
         gbc.gridy = 5;
@@ -357,9 +324,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // PHONE
-        // =========================
 
         gbc.gridx = 0;
         gbc.gridy = 6;
@@ -397,9 +361,6 @@ public class UserManagementFrame extends JFrame {
         gbc.gridx = 1;
         formCard.add(phoneField, gbc);
 
-        // =========================
-        // BUTTON PANEL
-        // =========================
 
         JPanel buttonPanel =
                 new JPanel();
@@ -457,9 +418,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // INFORMATION LABEL
-        // =========================
 
         JLabel informationLabel =
                 new JLabel(
@@ -496,9 +454,6 @@ public class UserManagementFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // CENTER FORM
-        // =========================
 
         GridBagConstraints centerGbc =
                 new GridBagConstraints();
@@ -522,9 +477,6 @@ public class UserManagementFrame extends JFrame {
                 BorderLayout.CENTER
         );
 
-        // =========================
-        // BUTTON ACTIONS
-        // =========================
 
         createButton.addActionListener(e ->
                 createEmployee()
@@ -560,18 +512,12 @@ public class UserManagementFrame extends JFrame {
             }
         });
 
-        // =========================
-        // ADD MAIN PANEL
-        // =========================
 
         add(
                 mainPanel,
                 BorderLayout.CENTER
         );
 
-        // =========================
-        // DISPLAY
-        // =========================
 
         setExtendedState(
                 JFrame.MAXIMIZED_BOTH
@@ -581,10 +527,6 @@ public class UserManagementFrame extends JFrame {
 
         setVisible(true);
     }
-
-    // =====================================================
-    // CREATE EMPLOYEE
-    // =====================================================
 
     private void createEmployee() {
 
@@ -619,9 +561,6 @@ public class UserManagementFrame extends JFrame {
                         .getText()
                         .trim();
 
-        // =========================
-        // VALIDATION
-        // =========================
 
         if (fullName.isEmpty() ||
             username.isEmpty() ||
@@ -662,9 +601,7 @@ public class UserManagementFrame extends JFrame {
             return;
         }
 
-        // =========================
-        // CREATE EMPLOYEE
-        // =========================
+
 
         UserService userService =
                 new UserService();
@@ -702,9 +639,6 @@ public class UserManagementFrame extends JFrame {
         }
     }
 
-    // =====================================================
-    // CLEAR FORM
-    // =====================================================
 
     private void clearForm() {
 
@@ -717,10 +651,6 @@ public class UserManagementFrame extends JFrame {
 
         fullNameField.requestFocus();
     }
-
-    // =====================================================
-    // TEXT FIELD
-    // =====================================================
 
     private JTextField createTextField() {
 
@@ -742,9 +672,6 @@ public class UserManagementFrame extends JFrame {
         return field;
     }
 
-    // =====================================================
-    // FORM LABEL
-    // =====================================================
 
     private JLabel createLabel(
             String text) {
