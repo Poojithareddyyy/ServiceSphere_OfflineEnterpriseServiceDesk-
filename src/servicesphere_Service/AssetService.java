@@ -63,9 +63,7 @@ public class AssetService {
         return assets;
     }
     
- // ==========================================
- // GET ALL ASSETS FOR ADMIN
- // ==========================================
+
 
  public List<Object[]> getAllAssets() {
 
@@ -120,10 +118,6 @@ public class AssetService {
      return assets;
  }
 
-
- // ==========================================
- // ASSIGN ASSET TO EMPLOYEE
- // ==========================================
 
  public boolean assignAsset(
          int assetId,
