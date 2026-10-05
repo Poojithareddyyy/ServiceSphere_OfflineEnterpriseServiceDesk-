@@ -47,9 +47,6 @@ public class MyTicketsFrame extends JFrame {
 
         setLayout(new BorderLayout(15, 15));
 
-        // =========================
-        // TOP HEADER
-        // =========================
 
         JPanel headerPanel = new JPanel(new BorderLayout());
         headerPanel.setBorder(
@@ -85,9 +82,7 @@ public class MyTicketsFrame extends JFrame {
         add(headerPanel, BorderLayout.NORTH);
 
 
-        // =========================
-        // TABLE
-        // =========================
+
 
         String[] columns = {
                 "Ticket Number",
@@ -140,10 +135,6 @@ public class MyTicketsFrame extends JFrame {
                 BorderLayout.CENTER
         );
 
-
-        // =========================
-        // BOTTOM BUTTONS
-        // =========================
 
         JPanel bottomPanel =
                 new JPanel(new FlowLayout(
@@ -202,9 +193,6 @@ public class MyTicketsFrame extends JFrame {
     }
 
 
-    // =========================
-    // LOAD TICKETS
-    // =========================
 
     private void loadTickets() {
 
@@ -223,8 +211,6 @@ public class MyTicketsFrame extends JFrame {
 
         if (tickets.isEmpty()) {
 
-            // No popup here.
-            // Empty table is cleaner UX.
         }
     }
 
