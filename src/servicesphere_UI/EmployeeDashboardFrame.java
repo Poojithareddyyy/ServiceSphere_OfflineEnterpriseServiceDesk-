@@ -36,18 +36,13 @@ public class EmployeeDashboardFrame extends JFrame {
     	
     	this.username = username;
 
-        // =========================
-        // FRAME SETTINGS
-        // =========================
 
         setTitle("ServiceSphere - Employee Dashboard");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setMinimumSize(new Dimension(1100, 700));
         setLayout(new BorderLayout());
 
-        // =========================
-        // SIDEBAR
-        // =========================
+
 
         sidebarPanel = new JPanel(new BorderLayout());
         sidebarPanel.setBackground(new Color(25, 35, 55));
@@ -77,9 +72,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 BorderLayout.NORTH
         );
 
-        // =========================
-        // MENU
-        // =========================
+
 
         JPanel menuPanel =
                 new JPanel(
@@ -137,9 +130,6 @@ public class EmployeeDashboardFrame extends JFrame {
                 BorderLayout.CENTER
         );
 
-        // =========================
-        // LOGOUT
-        // =========================
 
         JButton logoutButton =
                 createMenuButton("Logout");
@@ -184,9 +174,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 BorderLayout.SOUTH
         );
 
-        // =========================
-        // MAIN CONTENT
-        // =========================
+  
 
         contentPanel =
                 new JPanel(new BorderLayout());
@@ -195,9 +183,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 new Color(245, 247, 250)
         );
 
-        // =========================
-        // TOP HEADER
-        // =========================
+      
 
         JPanel topPanel =
                 new JPanel(new BorderLayout());
@@ -255,9 +241,6 @@ public class EmployeeDashboardFrame extends JFrame {
                 BorderLayout.NORTH
         );
 
-        // =========================
-        // MAIN EMPLOYEE AREA
-        // =========================
 
         JPanel mainPanel =
                 new JPanel(new BorderLayout());
@@ -272,9 +255,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 )
         );
 
-        // =========================
-        // STAT CARDS
-        // =========================
+
 
         JPanel statsPanel =
                 new JPanel(
@@ -323,9 +304,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 BorderLayout.NORTH
         );
 
-        // =========================
-        // RAISE TICKET FORM
-        // =========================
+
 
         JPanel ticketPanel =
                 new JPanel(new GridBagLayout());
@@ -354,9 +333,7 @@ public class EmployeeDashboardFrame extends JFrame {
         gbc.insets =
                 new Insets(8, 8, 8, 8);
 
-        // =========================
-        // FORM HEADING
-        // =========================
+    
 
         JLabel formHeading =
                 new JLabel("Raise a New Service Ticket");
@@ -387,9 +364,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // TITLE
-        // =========================
+
 
         JLabel titleLabel =
                 createFormLabel("Issue Title");
@@ -423,9 +398,6 @@ public class EmployeeDashboardFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // CATEGORY
-        // =========================
 
         JLabel categoryLabel =
                 createFormLabel("Category");
@@ -468,9 +440,6 @@ public class EmployeeDashboardFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // PRIORITY
-        // =========================
 
         JLabel priorityLabel =
                 createFormLabel("Priority");
@@ -511,10 +480,6 @@ public class EmployeeDashboardFrame extends JFrame {
                 priorityCombo,
                 gbc
         );
-
-        // =========================
-        // ASSET
-        // =========================
 
         JLabel assetLabel =
                 createFormLabel("Related Asset");
@@ -557,10 +522,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // DESCRIPTION
-        // =========================
-
+   
         JLabel descriptionLabel =
                 createFormLabel("Description");
 
@@ -602,9 +564,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 gbc
         );
 
-        // =========================
-        // SUBMIT BUTTON
-        // =========================
+      
 
         JButton submitButton =
                 new JButton("SUBMIT TICKET");
@@ -652,9 +612,7 @@ public class EmployeeDashboardFrame extends JFrame {
             String description =
                     descriptionArea.getText().trim();
 
-            // =========================
-            // VALIDATION
-            // =========================
+           
 
             if (issueTitle.isEmpty()) {
 
@@ -680,10 +638,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 return;
             }
 
-            // =========================
-            // CREATE TICKET
-            // =========================
-
+            
             
 
             String ticketNumber =
@@ -707,7 +662,7 @@ public class EmployeeDashboardFrame extends JFrame {
                         javax.swing.JOptionPane.INFORMATION_MESSAGE
                 );
 
-                // Clear form
+           
 
                 titleField.setText("");
                 categoryCombo.setSelectedIndex(0);
@@ -728,10 +683,6 @@ public class EmployeeDashboardFrame extends JFrame {
         });
         
         
-
-        // =========================
-        // ADD FORM
-        // =========================
 
         JPanel formContainer =
                 new JPanel(
@@ -774,9 +725,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 BorderLayout.CENTER
         );
 
-        // =========================
-        // ADD TO FRAME
-        // =========================
+
 
         add(
                 sidebarPanel,
@@ -788,9 +737,7 @@ public class EmployeeDashboardFrame extends JFrame {
                 BorderLayout.CENTER
         );
 
-        // =========================
-        // DISPLAY
-        // =========================
+
 
         setExtendedState(
                 JFrame.MAXIMIZED_BOTH
@@ -801,9 +748,7 @@ public class EmployeeDashboardFrame extends JFrame {
         setVisible(true);
     }
 
-    // =====================================================
-    // MENU BUTTON
-    // =====================================================
+
 
     private JButton createMenuButton(
             String text
@@ -837,9 +782,7 @@ public class EmployeeDashboardFrame extends JFrame {
         return button;
     }
 
-    // =====================================================
-    // STAT CARD
-    // =====================================================
+
 
     private JPanel createStatCard(
             String number,
@@ -915,9 +858,7 @@ public class EmployeeDashboardFrame extends JFrame {
         return card;
     }
 
-    // =====================================================
-    // FORM LABEL
-    // =====================================================
+  
 
     private JLabel createFormLabel(
             String text
